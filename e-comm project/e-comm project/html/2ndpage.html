@@ -1,0 +1,182 @@
+<!-- for vendor login and registration  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700&family=Pattaya&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://wallpaperboat.com/wp-content/uploads/2020/12/02/62556/light-color-12.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .frame {
+            width: 380px;
+            height: 480px;
+            padding: 5%;
+            position: relative;
+            border-radius: 5%;
+            margin: 6% auto;
+            background: linear-gradient(to right, rgb(226, 253, 255), rgb(210, 250, 255));
+            padding: 5px;
+            overflow: hidden;
+            position: relative
+
+        }
+
+        .button-box {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px rgb(255, 255, 255);
+            border-radius: 30px;
+
+        }
+
+        .toggle-btn {
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+
+        #btn {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: linear-gradient(to right, rgb(52, 255, 245), rgb(0, 221, 255));
+            border-radius: 30px;
+            transition: .5s;
+
+        }
+
+        .input-group {
+            top: 180px;
+            right: 15%;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            outline: none;
+            background: transparent;
+        }
+
+        .submit-btn {
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right, rgb(0, 255, 242), rgb(152, 253, 255));
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        #Login {
+            left: 50px;
+
+        }
+
+        #register {
+            left: 450px;
+
+        }
+        .head{
+            position: absolute;
+            top: 8px;
+            left: 540px;
+            color: rgb(86, 11, 156);
+            font-family: 'Alegreya Sans SC', sans-serif;
+            word-spacing: 5px;
+        }
+    </style>
+    <h1 class="head">Vendor Login</h1>
+    <div class="frame">
+
+
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="submit" class="toggle-btn" onclick="login()">Log In</button>
+            <button type="submit" class="toggle-btn" onclick="register()">Register</button>
+
+        </div>
+
+
+        <div>
+            <form id="login" class="input-group" action="login.php" method="post">
+                <input type="text" class="input-field" placeholder="User id" name="uname" required>
+                <input type="password" class="input-field" placeholder="enter password" name="upass" required>
+                <button type="submit" class="submit-btn" value="Login">Log In</button>
+            </form>
+
+            <!--this is Register from section-->
+
+
+            <form id="register" class="input-group" action="php_interface_w_sql.php" method="post">
+                <input type="text" class="input-field" placeholder="User id" name="userid" required>
+                <input type="email" class="input-field" placeholder="Enter Email" name="email" required>
+                <input type="password" class="input-field" placeholder="enter password" name="new_pass" required>
+                <input type="password" class="input-field" placeholder="Confrom password" name="pass2" >
+                <input type="submit" value="registration" class="submit-btn">
+            </form>
+        </div>
+       
+        <script>
+
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+
+            function register() {
+
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+
+            }
+
+            function login() {
+
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+
+            }
+
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>
